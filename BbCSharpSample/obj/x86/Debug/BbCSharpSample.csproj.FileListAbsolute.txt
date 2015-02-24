@@ -1,0 +1,10 @@
+C:\Users\Administrator\documents\visual studio 2010\Projects\BbCSharpSample\BbCSharpSample\bin\Debug\BbCSharpSample.exe
+C:\Users\Administrator\documents\visual studio 2010\Projects\BbCSharpSample\BbCSharpSample\bin\Debug\BbCSharpSample.pdb
+C:\Users\Administrator\documents\visual studio 2010\Projects\BbCSharpSample\BbCSharpSample\obj\x86\Debug\WindowsFormsApplication1.frmGetData.resources
+C:\Users\Administrator\documents\visual studio 2010\Projects\BbCSharpSample\BbCSharpSample\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Administrator\documents\visual studio 2010\Projects\BbCSharpSample\BbCSharpSample\obj\x86\Debug\BbCSharpSample.csproj.GenerateResource.Cache
+C:\Users\Administrator\documents\visual studio 2010\Projects\BbCSharpSample\BbCSharpSample\obj\x86\Debug\BbCSharpSample.exe
+C:\Users\Administrator\documents\visual studio 2010\Projects\BbCSharpSample\BbCSharpSample\obj\x86\Debug\BbCSharpSample.pdb
+C:\Users\Administrator\documents\visual studio 2010\Projects\BbCSharpSample\BbCSharpSample\bin\Debug\BbCSharpSample.exe.config
+C:\Users\Administrator\documents\visual studio 2010\Projects\BbCSharpSample\BbCSharpSample\obj\x86\Debug\BbCSharpSample.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\documents\visual studio 2010\Projects\BbCSharpSample\BbCSharpSample\bin\Debug\BbWsClient.dll
