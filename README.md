@@ -34,24 +34,6 @@ If logging in as a user, the user must have administrator rights in order to suc
 ### Developer Virtual Machine and SSL Certificate Checking
 If you decide to use the Blackboard Developer virtual machine, it is important to note that this VM contains a self-signed certificate, which will cause this code to fail. Because the Blackboard Learn 9.1 April and newer releases require you to use SSL, there is a constant in program.cs called IGNORE\_CERT\_ERRORS. Setting this constant to true WILL BYPASS SSL CERTIFICATE CHECKING, so be sure to undo this change when rolling out to production.
 
-### Gradebook.WS WSDL and Learn October 2014
-There is a bug in the Blackboard Learn 9.1 October 2014 release with the WSDL for gradebook.ws. This will cause SUDS to fail when trying to ingest the WSDL. 
-
-For more information and work-arounds for this bug, see the article <a href="https://blackboard.secure.force.com/btbb_articleview?id=kA370000000H5Fc" target="_blank">here</a>.
-
-- If you follow workaround 1, simply change the initial gradebookWS call:<br/>
-  <pre>
-    url = url_header + 'Gradebook.WS?wsdl'
-  </pre>
-with this:<br/>
-<pre>
-    url = 'file:///Users/shurrey/wsdl/Gradebook.xml'
-</pre>
-
-Just be sure to replace my absolute path to the absolute path on your file system.
-
-- If you follow workaround 2, the code should work as-is.
-
 ### Conclusion
 This code will give you the base knowledge you need to interact with the Blackboard Learn SOAP services using the .NET sample code library provided with Learn. A ful walkthrough of this code will be documented at https://help.blackboard.com. Once this is complete, a link to that document will be added here.
 
