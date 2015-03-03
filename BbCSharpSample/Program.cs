@@ -59,9 +59,19 @@ namespace WindowsFormsApplication1
         const Boolean DEBUG = true;
         // Constant for expected life of Web Service session. 
         const long EXPECTED_LIFE = 10000000;
-
+        // Constant to determine if certificate errors should be ignored. This should only be true if
+        // testing against a Learn instance with self-signed certificates, like the Developer VM
+        const Boolean IGNORE_CERT_ERRORS = true;
+        
         static void Main()
         {
+            // If running against a Development system with a self-signed SSL Certificate...
+            if (IGNORE_CERT_ERRORS)
+            {
+                // Ignore the certificate failure
+                // DO NOT DO THIS IN A PRODUCTION APPLICATION OR ENVIRONMENT!!
+                System.Net.ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
+            }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmGetData());
@@ -73,7 +83,7 @@ namespace WindowsFormsApplication1
             ws = new WebserviceWrapper(host, vendor, program, EXPECTED_LIFE);
             // Initialize the web service session. Under the covers, this takes care of Context.initialize()
             ws.initialize_v1();
-
+            
             // Create a string array of requested entitlements. This is overkill for this sample.
             string [] tools = new string [] {   "Announcement.WS:createCourseAnnouncements",
 															  "Announcement.WS:createOrgAnnouncements",
