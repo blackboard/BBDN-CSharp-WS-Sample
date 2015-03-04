@@ -21,7 +21,7 @@ You may need to add a few references. To accomplish this, you will need to right
 This code sample starts as a web form that gathers information. This web form allows you to:
 - Register a proxy tool
 - login as a proxy tool
-- login as a user
+- login as any Blackboard user
 - retrieve a list of courses a specified user is enrolled in and their role in that course.
 
 The web form asks for a URL. This URL must contain the protocol at the beginning:
@@ -35,6 +35,6 @@ If logging in as a user, the user must have administrator rights in order to suc
 If you decide to use the Blackboard Developer virtual machine, it is important to note that this VM contains a self-signed certificate, which will cause this code to fail. Because the Blackboard Learn 9.1 April and newer releases require you to use SSL, there is a constant in program.cs called IGNORE\_CERT\_ERRORS. Setting this constant to true WILL BYPASS SSL CERTIFICATE CHECKING, so be sure to undo this change when rolling out to production.
 
 ### Conclusion
-This code will give you the base knowledge you need to interact with the Blackboard Learn SOAP services using the .NET sample code library provided with Learn. A ful walkthrough of this code will be documented at https://help.blackboard.com. Once this is complete, a link to that document will be added here.
+This code will give you the base knowledge you need to interact with the Blackboard Learn SOAP services using the .NET sample code library provided with Learn. A full walkthrough of this code will be documented at https://help.blackboard.com. Once this is complete, a link to that document will be added here.
 
 <!-- For a thorough walkthrough of this code, visit the corresponding Blackboard Help page <a href="http://help.blackboard.com/en-us/Learn/9.1_2014_04/Administrator/080_Developer_Resources/020_Develop/020_Web_Services/010_Examples/Get_Course_Announcements_With_Python" target="_blank">here</a>. -->
