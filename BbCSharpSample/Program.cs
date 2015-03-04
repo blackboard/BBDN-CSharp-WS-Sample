@@ -1,4 +1,4 @@
-﻿/* # Copyright (C) 2015, Blackboard Inc.
+/* # Copyright (C) 2015, Blackboard Inc.
  * All rights reserved.
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
@@ -86,144 +86,145 @@ namespace WindowsFormsApplication1
             
             // Create a string array of requested entitlements. This is overkill for this sample.
             string [] tools = new string [] {   "Announcement.WS:createCourseAnnouncements",
-															  "Announcement.WS:createOrgAnnouncements",
-															  "Announcement.WS:createSystemAnnouncements",
-															  "Announcement.WS:deleteCourseAnnouncements",
-															  "Announcement.WS:deleteOrgAnnouncements",
-															  "Announcement.WS:deleteSystemAnnouncements",
-															  "Announcement.WS:getCourseAnnouncements",
-															  "Announcement.WS:getOrgAnnouncements",
-															  "Announcement.WS:getSystemAnnouncements",
-															  "Announcement.WS:updateCourseAnnouncements",
-															  "Announcement.WS:updateOrgAnnouncements",
-															  "Announcement.WS:updateSystemAnnouncements",
-															  "Calendar.WS:canUpdateCourseCalendarItem",
-															  "Calendar.WS:canUpdateInstitutionCalendarItem",
-															  "Calendar.WS:canUpdatePersonalCalendarItem",
-															  "Calendar.WS:createCourseCalendarItem",
-															  "Calendar.WS:createInstitutionCalendarItem",
-															  "Calendar.WS:createPersonalCalendarItem",
-															  "Calendar.WS:deleteCourseCalendarItem",
-															  "Calendar.WS:deleteInstitutionCalendarItem",
-															  "Calendar.WS:deletePersonalCalendarItem",
-															  "Calendar.WS:getCalendarItem",
-															  "Calendar.WS:saveCourseCalendarItem",
-															  "Calendar.WS:saveInstitutionCalendarItem",
-															  "Calendar.WS:savePersonalCalendarItem",
-															  "Calendar.WS:updateCourseCalendarItem",
-															  "Calendar.WS:updateInstitutionCalendarItem",
-															  "Calendar.WS:updatePersonalCalendarItem",
-															  "Content.WS:addContentFile",
-															  "Content.WS:deleteContentFiles",
-															  "Content.WS:deleteContents",
-															  "Content.WS:deleteCourseTOCs",
-															  "Content.WS:deleteLinks",
-															  "Content.WS:getContentFiles",
-															  "Content.WS:getFilteredContent",
-															  "Content.WS:getFilteredCourseStatus",
-															  "Content.WS:getLinksByReferredToType",
-															  "Content.WS:getLinksByReferrerType",
-															  "Content.WS:getReviewStatusByCourseId",
-															  "Content.WS:getTOCsByCourseId",
-															  "Content.WS:loadContent",
-															  "Content.WS:removeContent",
-															  "Content.WS:saveContent",
-															  "Content.WS:saveContentsReviewed",
-															  "Content.WS:saveCourseTOC",
-															  "Content.WS:saveLink",
-															  "Context.WS:emulateUser", 
-															  "Context.WS:getMemberships", 
-														      "Context.WS:getMyMemberships",
-															  "Course.WS:changeCourseBatchUid",
-															  "Course.WS:changeCourseCategoryBatchUid",
-															  "Course.WS:changeCourseDataSourceId",
-															  "Course.WS:changeOrgBatchUid",
-															  "Course.WS:changeOrgCategoryBatchUid",
-															  "Course.WS:changeOrgDataSourceId",
-															  "Course.WS:createCourse",
-															  "Course.WS:createOrg",
-															  "Course.WS:deleteCartridge",
-															  "Course.WS:deleteCourse",
-															  "Course.WS:deleteCourseCategory",
-															  "Course.WS:deleteCourseCategoryMembership",
-															  "Course.WS:deleteGroup",
-															  "Course.WS:deleteOrg",
-															  "Course.WS:deleteOrgCategory",
-															  "Course.WS:deleteOrgCategoryMembership",
-															  "Course.WS:deleteStaffInfo",
-															  "Course.WS:getAvailableGroupTools",
-															  "Course.WS:getCartridge",
-															  "Course.WS:getCategories",
-															  "Course.WS:getCategoryMembership",
-															  "Course.WS:getClassifications",
-															  "Course.WS:getCourse",
-															  "Course.WS:getGroup",
-															  "Course.WS:getOrg",
-															  "Course.WS:getStaffInfo",
-															  "Course.WS:saveCartridge",
-															  "Course.WS:saveCourse",
-															  "Course.WS:saveCourseCategory",
-															  "Course.WS:saveCourseCategoryMembership",
-															  "Course.WS:saveGroup",
-															  "Course.WS:saveOrgCategory",
-															  "Course.WS:saveOrgCategoryMembership",
-															  "Course.WS:saveStaffInfo",
-															  "Course.WS:updateCourse",
-															  "Course.WS:updateOrg",
-															  "Course.WS:loadCoursesInTerm", 
-                                                              "Course.WS:addCourseToTerm", 
-                                                              "Course.WS:removeCourseFromTerm", 
-                                                              "Course.WS:loadTerm", 
-                                                              "Course.WS:loadTermByCourseId", 
-                                                              "Course.WS:saveTerm", 
-                                                              "Course.WS:removeTerm", 
-                                                              "Course.WS:loadTerms", 
-                                                              "Course.WS:loadTermsByName",
-															  "CourseMembership.WS:deleteCourseMembership",
-															  "CourseMembership.WS:deleteGroupMembership",
-															  "CourseMembership.WS:getCourseMembership",
-															  "CourseMembership.WS:getCourseRoles",
-															  "CourseMembership.WS:getGroupMembership",
-															  "CourseMembership.WS:saveCourseMembership",
-															  "CourseMembership.WS:saveGroupMembership",
-															  "Gradebook.WS:deleteAttempts",
-															  "Gradebook.WS:deleteColumns",
-															  "Gradebook.WS:deleteGradebookTypes",
-															  "Gradebook.WS:deleteGrades",
-															  "Gradebook.WS:deleteGradingSchemas",
-															  "Gradebook.WS:getAttempts",
-															  "Gradebook.WS:getGradebookColumns",
-															  "Gradebook.WS:getGradebookTypes",
-															  "Gradebook.WS:getGrades",
-															  "Gradebook.WS:getGradingSchemas",
-															  "Gradebook.WS:saveAttempts",
-															  "Gradebook.WS:saveColumns",
-															  "Gradebook.WS:saveGradebookTypes",
-															  "Gradebook.WS:saveGrades",
-															  "Gradebook.WS:saveGradingSchemas",
-															  "Gradebook.WS:updateColumnAttribute",
-															  "User.WS:changeUserBatchUid",
-															  "User.WS:changeUserDataSourceId",
-															  "User.WS:deleteAddressBookEntry",
-															  "User.WS:deleteObserverAssociation",
-															  "User.WS:deleteUser",
-															  "User.WS:deleteUserByInstitutionRole",
-															  "User.WS:getAddressBookEntry",
-															  "User.WS:getInstitutionRoles",
-															  "User.WS:getObservee",
-															  "User.WS:getSystemRoles",
-															  "User.WS:getUser",
-															  "User.WS:getUserInstitutionRoles",
-															  "User.WS:saveAddressBookEntry",
-															  "User.WS:saveObserverAssociation",
-															  "User.WS:saveUser",
-															  "Util.WS:checkEntitlement",
-															  "Util.WS:deleteSetting",
-															  "Util.WS:getDataSources",
-															  "Util.WS:loadSetting",
-															  "Util.WS:saveSetting"
-														  };
-			// Create empty tickets array.
+						"Announcement.WS:createOrgAnnouncements",
+						"Announcement.WS:createSystemAnnouncements",
+						"Announcement.WS:deleteCourseAnnouncements",
+						"Announcement.WS:deleteOrgAnnouncements",
+						"Announcement.WS:deleteSystemAnnouncements",
+						"Announcement.WS:getCourseAnnouncements",
+						"Announcement.WS:getOrgAnnouncements",
+						"Announcement.WS:getSystemAnnouncements",
+						"Announcement.WS:updateCourseAnnouncements",
+						"Announcement.WS:updateOrgAnnouncements",
+						"Announcement.WS:updateSystemAnnouncements",
+						"Calendar.WS:canUpdateCourseCalendarItem",
+						"Calendar.WS:canUpdateInstitutionCalendarItem",
+						"Calendar.WS:canUpdatePersonalCalendarItem",
+						"Calendar.WS:createCourseCalendarItem",
+						"Calendar.WS:createInstitutionCalendarItem",
+						"Calendar.WS:createPersonalCalendarItem",
+						"Calendar.WS:deleteCourseCalendarItem",
+						"Calendar.WS:deleteInstitutionCalendarItem",
+						"Calendar.WS:deletePersonalCalendarItem",
+						"Calendar.WS:getCalendarItem",
+						"Calendar.WS:saveCourseCalendarItem",
+						"Calendar.WS:saveInstitutionCalendarItem",
+						"Calendar.WS:savePersonalCalendarItem",
+						"Calendar.WS:updateCourseCalendarItem",
+						"Calendar.WS:updateInstitutionCalendarItem",
+						"Calendar.WS:updatePersonalCalendarItem",
+						"Content.WS:addContentFile",
+						"Content.WS:deleteContentFiles",
+						"Content.WS:deleteContents",
+						"Content.WS:deleteCourseTOCs",
+						"Content.WS:deleteLinks",
+						"Content.WS:getContentFiles",
+						"Content.WS:getFilteredContent",
+						"Content.WS:getFilteredCourseStatus",
+						"Content.WS:getLinksByReferredToType",
+						"Content.WS:getLinksByReferrerType",
+						"Content.WS:getReviewStatusByCourseId",
+						"Content.WS:getTOCsByCourseId",
+						"Content.WS:loadContent",
+						"Content.WS:removeContent",
+						"Content.WS:saveContent",
+						"Content.WS:saveContentsReviewed",
+						"Content.WS:saveCourseTOC",
+						"Content.WS:saveLink",
+						"Context.WS:emulateUser", 
+						"Context.WS:getMemberships", 
+						"Context.WS:getMyMemberships",
+						"Course.WS:changeCourseBatchUid",
+						"Course.WS:changeCourseCategoryBatchUid",
+						"Course.WS:changeCourseDataSourceId",
+						"Course.WS:changeOrgBatchUid",
+						"Course.WS:changeOrgCategoryBatchUid",
+						"Course.WS:changeOrgDataSourceId",
+						"Course.WS:createCourse",
+						"Course.WS:createOrg",
+						"Course.WS:deleteCartridge",
+						"Course.WS:deleteCourse",
+						"Course.WS:deleteCourseCategory",
+						"Course.WS:deleteCourseCategoryMembership",
+						"Course.WS:deleteGroup",
+						"Course.WS:deleteOrg",
+						"Course.WS:deleteOrgCategory",
+						"Course.WS:deleteOrgCategoryMembership",
+						"Course.WS:deleteStaffInfo",
+						"Course.WS:getAvailableGroupTools",
+						"Course.WS:getCartridge",
+						"Course.WS:getCategories",
+						"Course.WS:getCategoryMembership",
+						"Course.WS:getClassifications",
+						"Course.WS:getCourse",
+						"Course.WS:getGroup",
+						"Course.WS:getOrg",
+						"Course.WS:getStaffInfo",
+						"Course.WS:saveCartridge",
+						"Course.WS:saveCourse",
+						"Course.WS:saveCourseCategory",
+						"Course.WS:saveCourseCategoryMembership",
+						"Course.WS:saveGroup",
+						"Course.WS:saveOrgCategory",
+						"Course.WS:saveOrgCategoryMembership",
+						"Course.WS:saveStaffInfo",
+						"Course.WS:updateCourse",
+						"Course.WS:updateOrg",
+						"Course.WS:loadCoursesInTerm", 
+                                                "Course.WS:addCourseToTerm", 
+                                                "Course.WS:removeCourseFromTerm", 
+                                                "Course.WS:loadTerm", 
+                                                "Course.WS:loadTermByCourseId", 
+                                                "Course.WS:saveTerm", 
+                                                "Course.WS:removeTerm", 
+                                                "Course.WS:loadTerms", 
+                                                "Course.WS:loadTermsByName",
+						"CourseMembership.WS:deleteCourseMembership",
+						"CourseMembership.WS:deleteGroupMembership",
+						"CourseMembership.WS:getCourseMembership",
+						"CourseMembership.WS:getCourseRoles",
+				  		"CourseMembership.WS:getGroupMembership",
+						"CourseMembership.WS:saveCourseMembership",
+						"CourseMembership.WS:saveGroupMembership",
+						"Gradebook.WS:deleteAttempts",
+						"Gradebook.WS:deleteColumns",
+						"Gradebook.WS:deleteGradebookTypes",
+					 	"Gradebook.WS:deleteGrades",
+						"Gradebook.WS:deleteGradingSchemas",
+						"Gradebook.WS:getAttempts",
+						"Gradebook.WS:getGradebookColumns",
+						"Gradebook.WS:getGradebookTypes",
+						"Gradebook.WS:getGrades",
+						"Gradebook.WS:getGradingSchemas",
+						"Gradebook.WS:saveAttempts",
+						"Gradebook.WS:saveColumns",
+						"Gradebook.WS:saveGradebookTypes",
+						"Gradebook.WS:saveGrades",
+						"Gradebook.WS:saveGradingSchemas",
+						"Gradebook.WS:updateColumnAttribute",
+						"User.WS:changeUserBatchUid",
+						"User.WS:changeUserDataSourceId",
+						"User.WS:deleteAddressBookEntry",
+						"User.WS:deleteObserverAssociation",
+						"User.WS:deleteUser",
+						"User.WS:deleteUserByInstitutionRole",
+						"User.WS:getAddressBookEntry",
+						"User.WS:getInstitutionRoles",
+						"User.WS:getObservee",
+						"User.WS:getSystemRoles",
+						"User.WS:getUser",
+						"User.WS:getUserInstitutionRoles",
+						"User.WS:saveAddressBookEntry",
+						"User.WS:saveObserverAssociation",
+						"User.WS:saveUser",
+						"Util.WS:checkEntitlement",
+						"Util.WS:deleteSetting",
+						"Util.WS:getDataSources",
+						"Util.WS:loadSetting",
+						"Util.WS:saveSetting"
+	    };
+			
+	    // Create empty tickets array.
             string [] tickets = null;
 
             // Register the proxy tool.
@@ -279,6 +280,9 @@ namespace WindowsFormsApplication1
             // Get the list of courseIds associated with the user requested.
             CourseIdVO [] courses = ctx.getMemberships(courseuser);
 
+            if (courses == null)
+                return courseList;
+
             // Initialize a user filter, set to get user by username and availability.
             UserFilter uf = new UserFilter();
             
@@ -289,36 +293,39 @@ namespace WindowsFormsApplication1
             // Get the user object
             UserVO [] user = usr.getUser(uf);
 
+            if (user == null)
+                return (courseList);
+
             int i = 1;
 
             // Iterate through the course list returned from contextWS.getMemberships()
             foreach (CourseIdVO courseIdVO in courses)
             {
-                // Grab the course Id
-                String courseId = courseIdVO.externalId;
-
-                // Initialize a new Course Filter and Membership Filter
-                CourseFilter cf = new CourseFilter();
-                MembershipFilter mf = new MembershipFilter();
-
-                // Set course filter to search for courses by user Id. Yes, this is redundant, however
-                // ContextWS.getMemberships returns both courses and organizations. This only retrieves courses
-                cf.filterType = 3;
-                cf.filterTypeSpecified = true;
-                cf.ids = new string[] { courseId };
-
-                // Set the membership filter to get memberships by course Id and UserId.
-                // Getting by user Id only (filter type 5) always fails. The course Id will be added
-                // during the foreach loop below.
-                mf.filterType = 6;
-                mf.filterTypeSpecified = true;
-                mf.userIds = new string[] { user[0].id };
-
-                // Load courses according to the course filter above
-                CourseVO[] course = crs.loadCourses(cf);
-
                 try
                 {
+                    // Grab the course Id
+                    String courseId = courseIdVO.externalId;
+
+                    // Initialize a new Course Filter and Membership Filter
+                    CourseFilter cf = new CourseFilter();
+                    MembershipFilter mf = new MembershipFilter();
+
+                    // Set course filter to search for courses by user Id. Yes, this is redundant, however
+                    // ContextWS.getMemberships returns both courses and organizations. This only retrieves courses
+                    cf.filterType = 3;
+                    cf.filterTypeSpecified = true;
+                    cf.ids = new string[] { courseId };
+
+                    // Set the membership filter to get memberships by course Id and UserId.
+                    // Getting by user Id only (filter type 5) always fails. The course Id will be added
+                    // during the foreach loop below.
+                    mf.filterType = 6;
+                    mf.filterTypeSpecified = true;
+                    mf.userIds = new string[] { user[0].id };
+
+                    // Load courses according to the course filter above
+                    CourseVO[] course = crs.loadCourses(cf);
+
                     // if course is null, either the call failed, or the courseId actually refers to an organization.
                     if (course[0] == null)
                     {
@@ -328,19 +335,19 @@ namespace WindowsFormsApplication1
                     {
                         // Add the current course Id to the membership filter
                         mf.courseIds = new string[] { courseId };
-                         
+
                         // Get Course memberships for the given user and course, as specified in the membership filter
                         CourseMembershipVO[] memberships = crm.loadCourseMembership(courseId, mf);
 
                         // If memberships were returned...
-                        if(memberships != null )
+                        if (memberships != null)
                         {
                             // add the course id, the course name, the membership pk1, and the role id
                             courseList[i, 0] = course[0].courseId;
                             courseList[i, 1] = course[0].name;
                             courseList[i, 2] = memberships[0].id;
                             courseList[i, 3] = memberships[0].roleId;
-                            if(DEBUG)
+                            if (DEBUG)
                                 Console.WriteLine(i + ": " + courseList[i, 0] + "," + courseList[i, 1] + "," + courseList[i, 2] + "," + courseList[i, 3]);
                             i++;
                         }
