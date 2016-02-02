@@ -327,7 +327,8 @@ namespace WindowsFormsApplication1
                     CourseVO[] course = crs.loadCourses(cf);
 
                     // if course is null, either the call failed, or the courseId actually refers to an organization.
-                    if (course[0] == null)
+                    // Check for course == null so we don't throw an exception when attempting to access the array.
+                    if (course == null || course[0] == null)
                     {
                         continue;
                     }
