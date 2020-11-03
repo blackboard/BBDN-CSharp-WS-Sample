@@ -1,4 +1,7 @@
 # BBDN-CSharp-WS-Sample
+
+**NOTE: SOAP Web Services have been removed from the Blackboard Learn product as of the Q4 2019 Release (3900.0.0)**
+
 This project contains sample code for interacting with the Blackboard Learn SOAP Web Services in C#. This sample uses the library built from the Sample code available with for download directly from Blackboard Learn. The code demonstrates the code necessary to register a Proxy Tool, login as a tool or user, and retrieve a list of courses a specified user is enrolled in and the role that user has in those courses.
 
 ###Project at a glance:
